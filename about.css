@@ -1,0 +1,191 @@
+@font-face {
+    font-family: classic;
+    src: url(fonts/Classic_Roman_Std_Regular.otf);
+}
+@import url('https://fonts.googleapis.com/css?family=Arimo&display=swap');
+
+html {
+    height: 100%;
+    width: 100%;
+     scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    margin-top: -5px;
+    flex-direction: column;
+    margin: 0px;
+    font-family: Medium;
+    font-family: classic;
+    cursor: crosshair;
+    pointer-events: none;
+    background-color: rgba(179,179,179,1);
+}
+
+
+#logo {
+   /* position: fixed;*/
+    position: relative;
+    z-index: 10;
+    width: 80px; 
+    height: auto;
+    margin-left: 30px;
+    margin-top: 30px;
+    animation-name: anime;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    transform: translateZ(0);   
+    
+}
+
+@keyframes anime {
+  0% {transform: rotate3d(0, 1, 0, 0deg);}
+  50% {transform: rotate3d(0, 1, 0, 180deg);}
+  100% {transform: rotate3d(0, 1, 0, 360deg);}
+}
+/*
+@keyframes anime {
+  0% {filter: blur(1px);}
+  50% {filter: blur(0px);}
+  100% {filter: blur(1px);}
+}
+*/
+.dropdown{
+    position: fixed;
+    width: 100px;
+        pointer-events: all;
+    
+}
+
+.dropdown:hover .menu {
+    opacity: 1;
+    height: auto;
+}
+
+
+.menu {
+    flex-direction: column;
+    z-index: 10;
+    margin-left: 40px;
+    width: 200px;
+    height: 0;
+    opacity: 0;
+    transition-duration: 0.5s;
+    position: absolute;
+    overflow: hidden;
+        pointer-events: all;
+    
+}
+
+.menu_item {
+    display: flex;
+    color: white;
+    font-size: 20px;
+    line-height: 1;
+        pointer-events: all;
+}
+
+.menu { 
+    list-style-type: none;
+    color: transparent;
+}
+
+.menu > .menu_item {
+    opacity: 1.0;
+    transition-duration: 0.5s;
+}
+
+.menu:hover > .menu_item:not(:hover) {
+    opacity: 0.5;
+    transition-duration: 0.5s;
+}
+a { 
+text-decoration: none;
+color: white;}
+
+a:hover { 
+text-decoration: underline;
+color: white;}
+
+#about {
+    margin-top: 0px;
+}
+#text2 {
+    margin-top: 50px;
+font-family: 'Arimo', sans-serif;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 24px;
+    width: 50%;
+    color: white;
+    text-align: justify;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+#trailer {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: 5%;
+    z-index: 99;
+    pointer-events: all;
+}
+
+
+#creditos {
+    text-align: center;
+    font-size: 22px;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#por {
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 22px;
+}
+
+.creditem, #por {
+    color: white;
+    width: 200px;
+    text-align: center;
+    
+}
+
+.esq {
+    margin-left: auto;
+}
+
+.dir {
+    margin-right: auto;
+}
+
+.meio {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+
+
+#footer {
+    display: flex;
+    position: relative;
+    color: white;
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    
+}
+

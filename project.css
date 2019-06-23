@@ -1,0 +1,296 @@
+@font-face {
+    font-family: classic;
+    src: url(fonts/Classic_Roman_Std_Regular.otf);
+}
+@import url('https://fonts.googleapis.com/css?family=Arimo&display=swap');
+
+html {
+    height: 100%;
+    width: 100%;
+     scroll-behavior: smooth;
+}
+body {
+    width: 100%;
+    display: flex;
+    margin-top: -5px;
+    flex-direction: column;
+    margin: 0px;
+    font-family: Medium;
+    font-family: classic;
+    cursor: auto;
+    background-color: black;
+    height: 4000px;
+    
+}
+
+#logo {
+   /* position: fixed;*/
+    position: relative;
+    z-index: 10;
+    width: 80px; 
+    height: auto;
+    margin-left: 30px;
+    margin-top: 30px;
+    animation-name: anime;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    transform: translateZ(0);  
+}
+
+@keyframes anime {
+  0% {transform: rotate3d(0, 1, 0, 0deg);}
+  30% {transform: rotate3d(0, 1, 0, 180deg);}
+  60% {transform: rotate3d(0, 1, 0, 360deg);}
+}
+/*
+@keyframes anime {
+  0% {filter: blur(1px);}
+  50% {filter: blur(0px);}
+  100% {filter: blur(1px);}
+}
+*/
+.dropdown{
+    position: fixed;
+    width: 100px;
+    pointer-events: all;
+    z-index: 10;
+
+    
+}
+
+.dropdown:hover .menu {
+    opacity: 1;
+    height: auto;
+}
+
+
+.menu {
+    flex-direction: column;
+    margin-left: 40px;
+    width: 200px;
+    height: 0;
+    opacity: 0;
+    transition-duration: 0.5s;
+    position: absolute;
+    overflow: hidden;
+    pointer-events: all;
+    
+}
+
+.menu_item {
+    display: flex;
+    color: white;
+    font-size: 20px;
+    line-height: 1;
+        pointer-events: all;
+}
+
+.menu { 
+    list-style-type: none;
+    color: transparent;
+}
+
+.menu > .menu_item {
+    opacity: 1.0;
+    transition-duration: 0.5s;
+}
+
+.menu:hover > .menu_item:not(:hover) {
+    opacity: 0.5;
+    transition-duration: 0.5s;
+}
+
+
+a { 
+text-decoration: none;
+cursor: pointer;
+color: white;}
+
+a:hover { 
+text-decoration: underline;
+color: white;}
+
+
+#botao {
+    position: fixed;
+    width: 7%;
+    margin-left: 93%;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 46%;
+    color: white;
+    cursor: pointer;}
+
+.overlay {
+  height: auto;
+  width: 0;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgba(0,0,0, 0.4);
+  overflow-x: hidden;
+    cursor:auto;
+    pointer-events: none;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+ pointer-events: none;
+}
+
+.overlay a {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 60px;
+  color: white;
+  display: block;
+ pointer-events: none;
+
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay #closebtn {
+    position: fixed;
+    margin-left: 2%;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 46%;
+    color: white;
+    cursor: pointer;
+    pointer-events: all;
+  visibility: hidden;
+
+}
+#seccao1 {
+    display: flex;
+    flex-direction: column;
+}
+#titulo1 {
+    text-transform: capitalize;
+    color: white;
+    font-size: 25px;
+    margin-top: 160px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#texto1 {
+    font-family: 'Arimo', sans-serif;
+    color: white;
+    font-size: 16px;
+    margin-top: 20px;
+    text-align:justify; 
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#video1 {
+    width: 50%;
+    height: auto;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    pointer-events: all;
+    border: none;
+}
+#texto1_2 {
+    margin-top: 400px;
+    font-size: 25px;
+    text-align: center;
+    line-height: 40px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 250px;
+
+}
+#esquema1 {
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+* {box-sizing: border-box}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 40%;
+  position: relative;
+  margin: auto;
+margin-top: 80px;
+pointer-events: all;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+margin-top: 50px;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  pointer-events: all;
+    margin-bottom: 400px;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+#video2 {
+    width: 40%;
+    height: auto;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    pointer-events: all;
+    border: none;
+}
