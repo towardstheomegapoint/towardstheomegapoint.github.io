@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TOWARDS THE OMEGA POINT</title>
+    <link rel="stylesheet" href="process.css">
+    <link rel="icon" type="image/png" href="images/logo.png"> 
+   
+</head>
+
+
+<body>
+ 
+  
+    <div class="dropdown">
+        <a href="index.html"><img id="logo" src="logo.png"></a>
+            <div class="menu">
+                <p><a href="project.html" class="menu_item">PROJECT</a></p>
+                <p><a href="about.html" class="menu_item">ABOUT</a></p>
+                <p><a href="perspectives.html" class="menu_item">PERSPECTIVES</a></p>
+                <p><a href="process.html" class="menu_item">PROCESS</a></p>
+            </div>
+    </div>  
+    
+
+    <p id="text2">
+        This page contains spreads of an editorial object edited to archive all the information regarding the process behind the development of Towards the Omega Point. It is divided in five installments. 
+        </p>
+    <div id="contentor">
+        <img id="nav_button" class="left" onclick="prevPic()" src="images/setaesquerda.svg">
+        <img id="spread" src="manual/0.jpg">
+        <img id="nav_button" class="right" onclick="nextPic()" src="images/setadireita.svg">
+    </div>
+    
+    
+    <p id="textoprimeiro">— The first one, DEPARTURE & SETTING, deals with the way we took off from Lucrecia Martel’s 2008 film “The Headless Woman”. From the idea of guilt present throughout the film, we imagine a society where no guilt would exist because there would be no space for individualism (and we theorize that guilt only exists as a consequence of individualistic behavior). As such, in this installment, we lay down the principles for our fiction, along with the introduction of the concepts of Noosphere and Omega Point.<br><br>— The second one, EVOLUTION—WORLDBUILDING PT. 1, starts to expand our concept into a fleshed out alternative reality. By speculating about the past of this society we introduce feasibility to our project, tying loose ends and constructing a solid ground for further speculations. In Towards the Omega Point, the evolution from an individualistic to a collectivistic society was biological, and thus, needed a strong scientific backing to support it. This installment aims to illustrate the process behind the writing of this lore which is contained in another editorial object (the CODEX, browsable in the PROJECT page).<br><br>— The third installment, FROM GENERAL TO PARTICULAR—WORLDBUILDING PT.2, dives into the present state of this society both through the big picture of various social dimensions of human existence (three of which gave rise to the videos included in the PERSPECTIVES page) and also through the testimonies of individuals who inhabit this world (included in the Collective Safety Inquiries, which are showcased in the PROJECT page).<br><br>— The fourth installment, PROJECT ROOM, expands the process behind the public exhibition of this fiction through an immersive audiovisual installation, the Project Room. This space had three layers of understanding that composed the perception of this fiction through different lenses with different moral connotations: UTOPIA, DYSTOPIA, and a middle layer that bridges the two, where we presented INCONGRUENCES such as the testimonies collected in the Collective Safety Inquiries.<br><br>— The fifth installment, EPILOGUE, closes the fiction with a personal note on how we perceived the whole process and the pertinence of this fiction in the questioning of the vigent social and political paradigm.
+</p>
+
+    <div id="creditos"> <p>It takes several minutes to adjust to the dark<br>DC V / 2019</p></div>
+
+
+    <script>
+//        VARIAVEIS QUE TENS DE MUDAR
+        var target = document.getElementById("spread");
+        var numerodeimagens = 43;
+
+//      PARTE QUE NAO PRECISAS DE MEXER        
+        var counter = 0;
+        var img = new Array(numerodeimagens);
+        for (var i = 0; i < numerodeimagens; i++) {
+            img[i] = new Image();
+            img[i].src = 'manual/' + i + '.jpg';
+        }
+
+        function nextPic() {
+            counter += 1;
+            if (counter > img.length - 1) {
+                counter = 0;
+            }
+            target.src = img[counter].src;
+        }
+        
+        function prevPic() {
+            counter += -1;
+            if (counter > img.length - 1) {
+                counter = 0;
+            }
+            target.src = img[counter].src;
+        }
+
+    </script>
+ 
+</body>
+    
+  
+
+
+
+</html>

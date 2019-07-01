@@ -2,8 +2,10 @@
     font-family: classic;
     src: url(fonts/Classic_Roman_Std_Regular.otf);
 }
-@import url('https://fonts.googleapis.com/css?family=Arimo&display=swap');
-
+@font-face {
+    font-family: helvetica;
+    src: url(fonts/HelveticaNeueLTStd-Lt.otf);
+}
 html {
     height: 100%;
     width: 100%;
@@ -19,7 +21,8 @@ body {
     font-family: classic;
     cursor: auto;
     background-color: black;
-    height: 4000px;
+    height: auto;
+    pointer-events: none;
     
 }
 
@@ -119,16 +122,379 @@ color: white;}
     text-align: center;
     margin-top: 46%;
     color: white;
-    cursor: pointer;}
+    cursor: pointer;
+pointer-events: all;
+    transition-duration: 0.5s;
+    visibility: hidden;
+    
+}
+
+#botao:active {
+    opacity: 0.5;
+    
+}
+
+.overlay {
+    height: auto;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgba(0,0,0, 0.7);
+    overflow-x: hidden;
+    cursor:auto;
+    pointer-events: none;
+    overflow-y: hidden;
+    transition-duration: 0.05s;
+    opacity: 1;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+ pointer-events: none;
+    overflow-y: hidden;
+}
+
+.overlay a {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 60px;
+  color: white;
+  display: block;
+ pointer-events: all;
+
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay #closebtn {
+    position: fixed;
+    margin-left: 2%;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 46%;
+    color: white;
+    cursor: pointer;
+    pointer-events: all;
+  visibility: visible;
+
+}
+#seccao1 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+#seccao2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20%;
+}
+#seccao3 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15%;
+}
+#titulo1 {
+    text-transform: capitalize;
+    color: white;
+    font-size: 25px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#texto1 {
+    font-family: 'helvetica', sans-serif;
+    color: white;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 2%;
+    text-align:justify; 
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#video1 {
+    width: 40%;
+    height: auto;
+    margin-top: 4%;
+    margin-left: auto;
+    margin-right: auto;
+    pointer-events: all;
+    border: none;
+}
+#texto1_2 {
+    margin-top: 22%;
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-transform: uppercase;
+
+
+}
+#esquema1 {
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+#texto2 {
+    font-family: 'helvetica', sans-serif;
+    color: white;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 5%;
+    text-align:justify; 
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#videobg {
+    pointer-events:none; 
+    margin: 0;
+    z-index: -99;
+}
+* {box-sizing: border-box}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 40%;
+  position: relative;
+  margin: auto;
+margin-top: 5%;
+pointer-events: all;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  pointer-events: all;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+#video2 {
+    width: 40%;
+    height: auto;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    pointer-events: all;
+    border: none;
+}
+
+#contentor {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 105px;
+    margin-bottom: 60px;
+    pointer-events: none;
+overflow-y: hidden;
+}
+
+#spread {
+    position: relative;
+    width: auto;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2);
+    pointer-events: none;
+    
+
+}
+
+#nav_button {
+    height: 50px;
+    width: auto;
+    margin-top: 20%;
+    margin-bottom: 75%;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+#nav_button:active {
+    opacity: 0.5;
+
+}
+
+.left {
+    margin-right: auto;
+}
+
+.right {
+    margin-left: auto;
+}
+
+
+
+#creditos {
+position: relative;
+    display: flex;
+    flex-direction: column;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+text-transform: uppercase;
+font-family: 'helvetica', sans-serif;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 700px) {
+ body {
+    width: 100%;
+    display: flex;
+    margin-top: 0;
+    flex-direction: column;
+    pointer-events: none;
+    background-color: rgba(179,179,179,1);
+}
+
+
+#logo {
+
+    visibility: collapse;
+    
+    
+}
+
+
+.dropdown{
+    position:relative;
+    display: flex;
+    width: 100%;
+    pointer-events: all;
+    margin-right: auto;
+    text-align: center;
+    margin-left: auto;
+    margin-top: 20px;
+    
+}
+
+.dropdown:hover .menu {
+    opacity: 1;
+    height: auto;
+}
+
+
+.menu {
+    flex-direction: row;
+    z-index: 0;
+    margin-left: 0;
+    width: 100%;
+    height: 0;
+    opacity: 1;
+    text-align: center;
+    transition-duration: 0;
+    position: absolute;
+    overflow: visible;
+    pointer-events: all;
+    visibility: visible;
+    
+}
+
+.menu_item {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 18px;
+    line-height: 0.7;
+    margin-right: 0;
+        pointer-events: all;
+    text-align: center;
+}
+
+.menu > .menu_item {
+    opacity: 1.0;
+    transition-duration: 0;
+}
+
+.menu:hover > .menu_item:not(:hover) {
+    opacity: 0.5;
+    transition-duration: 0;
+}
+a { 
+text-decoration: none;
+color: white;}
+
+a:hover { 
+text-decoration: underline;
+color: white;}
+
+
+#botao {
+    visibility: hidden;}
 
 .overlay {
   height: auto;
-  width: 0;
+  width: 100%;
   position: absolute;
   z-index: 1;
   top: 0;
   right: 0;
-  background-color: rgba(0,0,0, 0.4);
+  background-color: rgba(0,0,0, 0.7);
   overflow-x: hidden;
     cursor:auto;
     pointer-events: none;
@@ -158,81 +524,94 @@ color: white;}
 }
 
 .overlay #closebtn {
-    position: fixed;
-    margin-left: 2%;
-    font-size: 40px;
-    text-align: center;
-    margin-top: 46%;
-    color: white;
-    cursor: pointer;
-    pointer-events: all;
   visibility: hidden;
 
 }
 #seccao1 {
     display: flex;
     flex-direction: column;
+    margin-top: 180px;
+}
+#seccao2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+}
+#seccao3 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15%;
 }
 #titulo1 {
     text-transform: capitalize;
     color: white;
-    font-size: 25px;
-    margin-top: 160px;
-    width: 40%;
+    font-size: 20px;
+    width: 80%;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
 
 #texto1 {
-    font-family: 'Arimo', sans-serif;
+    font-family: 'helvetica', sans-serif;
     color: white;
-    font-size: 16px;
-    margin-top: 20px;
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 0;
     text-align:justify; 
-    width: 40%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
 
 #video1 {
-    width: 50%;
+    width: 80%;
     height: auto;
-    margin-top: 20px;
+    margin-top: 4%;
     margin-left: auto;
     margin-right: auto;
     pointer-events: all;
     border: none;
 }
 #texto1_2 {
-    margin-top: 400px;
-    font-size: 25px;
-    text-align: center;
-    line-height: 40px;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    color: white;
-    text-transform: uppercase;
-    margin-bottom: 250px;
-
+  font-size: 16px;
+    line-height: 18px;
+    width: 90%;
+    margin-top: 5%;
 }
 #esquema1 {
-    width: 25%;
+    width: 40%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 40px;
+    margin-top: 1%;
 }
-
+#texto2 {
+    font-family: 'helvetica', sans-serif;
+    color: white;
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 0;
+    text-align:justify; 
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.videobg {
+    visibility: hidden;
+}
+    .imgbg {
+       visibility: hidden;
+    }
 * {box-sizing: border-box}
 .mySlides {display: none}
 img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-  width: 40%;
+  width: 60%;
   position: relative;
   margin: auto;
-margin-top: 80px;
+margin-top: 5%;
 pointer-events: all;
 }
 
@@ -248,49 +627,65 @@ pointer-events: all;
 }
 
 
-/* The dots/bullets/indicators */
-.dot {
-margin-top: 50px;
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-  pointer-events: all;
-    margin-bottom: 400px;
-}
 
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
 
 #video2 {
-    width: 40%;
+    width: 80%;
     height: auto;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     pointer-events: all;
     border: none;
+    margin-bottom: 0px;
+}
+#contentor {
+    width: 80%;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    margin-bottom: 150px;
+}
+
+#spread {
+    position: relative;
+    width: auto;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+
+box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2);
+}
+ 
+    
+#nav_button {
+    height: 30px;
+    width: auto;
+    margin-top: 20%;
+    margin-bottom: 75%;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+
+#creditos {
+   margin-top: -100px;
+position: relative;
+    display: flex;
+    flex-direction: column;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+text-transform: uppercase;
+font-family: 'helvetica', sans-serif;
+    font-size: 14px;
+    pointer-events: none;
+}
+#creditos {
+    font-size: 12px;
+    }
 }
