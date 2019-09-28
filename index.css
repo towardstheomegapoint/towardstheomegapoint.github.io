@@ -136,6 +136,9 @@ body {
     
 }
 
+#thumbnail{
+    visibility: hidden;
+}
 .menu_item {
     display: flex;
     color: white;
